@@ -22,7 +22,19 @@ class ViewController: UIViewController {
     var runningNumber = ""
     var leftValStr = ""
     var rightValStr = ""
+    var currentOperation: Operation = Operation.Empty
     
+    
+    enum Operation: String {
+        case Divide = "/"
+        case Multiply = "*"
+        case Subtract = "-"
+        case Add = "+"
+        case Equal = "="
+        case Empty = "Empty"
+    }
+    
+    // Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,33 +49,56 @@ class ViewController: UIViewController {
         } catch let err as NSError {
             print(err.debugDescription)
         }
+        
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
     }
     
+    func buttonSound() {
+        if btnSound.playing {
+           btnSound.stop()
+        }
+        
+        btnSound.play()
+
+    }
+    
+    func processOperation(op: Operation) {
+        buttonSound()
+    }
+    
+    
     // Actions
         // Number Buttons
     @IBAction func numberPressed(btn: UIButton!) {
-        btnSound.play()
+        buttonSound()
+        runningNumber += "\(btn.tag)"
+        outputLabel.text = runningNumber
+        
     }
     
     
         // Operator Buttons
     @IBAction func divideButton(sender: UIButton) {
+        processOperation(Operation.Divide)
     }
     
     @IBAction func multiplyButton(sender: UIButton) {
+        processOperation(Operation.Multiply)
     }
     
     @IBAction func subtractButton(sender: UIButton) {
+        processOperation(Operation.Subtract)
     }
     
     @IBAction func additionButton(sender: UIButton) {
+        processOperation(Operation.Add)
     }
     
     @IBAction func equalButton(sender: UIButton) {
+        processOperation(Operation.Equal)
     }
     
     
