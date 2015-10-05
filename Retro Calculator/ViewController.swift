@@ -14,8 +14,14 @@ class ViewController: UIViewController {
     // Outlets
     @IBOutlet weak var outputLabel: UILabel!
     
-    
+    // Properties
+        // Sound
     var btnSound: AVAudioPlayer!
+    
+        // Numbers
+    var runningNumber = ""
+    var leftValStr = ""
+    var rightValStr = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,9 +43,29 @@ class ViewController: UIViewController {
         return UIStatusBarStyle.LightContent
     }
     
+    // Actions
+        // Number Buttons
     @IBAction func numberPressed(btn: UIButton!) {
         btnSound.play()
     }
+    
+    
+        // Operator Buttons
+    @IBAction func divideButton(sender: UIButton) {
+    }
+    
+    @IBAction func multiplyButton(sender: UIButton) {
+    }
+    
+    @IBAction func subtractButton(sender: UIButton) {
+    }
+    
+    @IBAction func additionButton(sender: UIButton) {
+    }
+    
+    @IBAction func equalButton(sender: UIButton) {
+    }
+    
     
     
 }
