@@ -7,25 +7,40 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
-
+    
+    // Outlets
+    @IBOutlet weak var outputLabel: UILabel!
+    
+    
+    var btnSound: AVAudioPlayer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
+        // Button Sound Logic
+        let path = NSBundle.mainBundle().pathForResource("btn", ofType: "wav")
+        
+        let soundURL = NSURL(fileURLWithPath: path!)
+        
+        do {
+            try btnSound = AVAudioPlayer(contentsOfURL: soundURL)
+            btnSound.prepareToPlay()
+        } catch let err as NSError {
+            print(err.debugDescription)
+        }
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
     }
     
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func numberPressed(btn: UIButton!) {
+        btnSound.play()
     }
-
-
+    
+    
 }
 
