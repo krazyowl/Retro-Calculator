@@ -12,6 +12,7 @@
 		E4EE48FF1BC2C5050040F003 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4EE48FD1BC2C5050040F003 /* Main.storyboard */; };
 		E4EE49011BC2C5050040F003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4EE49001BC2C5050040F003 /* Assets.xcassets */; };
 		E4EE49041BC2C5050040F003 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4EE49021BC2C5050040F003 /* LaunchScreen.storyboard */; };
+		E4EE490C1BC2C6640040F003 /* btn.wav in Resources */ = {isa = PBXBuildFile; fileRef = E4EE490B1BC2C6640040F003 /* btn.wav */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		E4EE49001BC2C5050040F003 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4EE49031BC2C5050040F003 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4EE49051BC2C5050040F003 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4EE490B1BC2C6640040F003 /* btn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = btn.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		E4EE48F81BC2C5050040F003 /* Retro Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				E4EE490B1BC2C6640040F003 /* btn.wav */,
 				E4EE48F91BC2C5050040F003 /* AppDelegate.swift */,
 				E4EE48FB1BC2C5050040F003 /* ViewController.swift */,
 				E4EE48FD1BC2C5050040F003 /* Main.storyboard */,
@@ -124,6 +127,7 @@
 				E4EE49041BC2C5050040F003 /* LaunchScreen.storyboard in Resources */,
 				E4EE49011BC2C5050040F003 /* Assets.xcassets in Resources */,
 				E4EE48FF1BC2C5050040F003 /* Main.storyboard in Resources */,
+				E4EE490C1BC2C6640040F003 /* btn.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,7 +254,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Retro Calculator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.krazyowl.Retro-Calculator";
+				PRODUCT_BUNDLE_IDENTIFIER = com.krazyowl.retrocalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -261,7 +265,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Retro Calculator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.krazyowl.Retro-Calculator";
+				PRODUCT_BUNDLE_IDENTIFIER = com.krazyowl.retrocalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
