@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     var leftValStr = ""
     var rightValStr = ""
     var currentOperation: Operation = Operation.Empty
+    var result = ""
     
     
     enum Operation: String {
@@ -30,7 +31,6 @@ class ViewController: UIViewController {
         case Multiply = "*"
         case Subtract = "-"
         case Add = "+"
-        case Equal = "="
         case Empty = "Empty"
     }
     
@@ -67,6 +67,35 @@ class ViewController: UIViewController {
     
     func processOperation(op: Operation) {
         buttonSound()
+        
+        if currentOperation != Operation.Empty {
+            
+            if runningNumber != "" {
+                rightValStr = runningNumber
+                runningNumber = ""
+                
+                if currentOperation == Operation.Multiply {
+                    result = "\(Int(leftValStr)! * Int(rightValStr)!)"
+                } else if currentOperation == Operation.Divide {
+                    result = "\(Int(leftValStr)! / Int(rightValStr)!)"
+                } else if currentOperation == Operation.Subtract {
+                    result = "\(Int(leftValStr)! - Int(rightValStr)!)"
+                } else if currentOperation == Operation.Add {
+                    result = "\(Int(leftValStr)! + Int(rightValStr)!)"
+                }
+                
+                leftValStr = result
+                outputLabel.text = result
+            }
+            
+            currentOperation = op
+            
+            
+        } else {
+            leftValStr = runningNumber
+            runningNumber = ""
+            currentOperation = op
+        }
     }
     
     
@@ -98,7 +127,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func equalButton(sender: UIButton) {
-        processOperation(Operation.Equal)
+        processOperation(currentOperation)
     }
     
     
