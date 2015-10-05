@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,12 +16,57 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space-bg" translatesAutoresizingMaskIntoConstraints="NO" id="yIU-pC-RTu">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="yIU-pC-RTu" secondAttribute="height" multiplier="1:1" id="Apu-4K-7dC"/>
+                                    <constraint firstAttribute="width" secondItem="yIU-pC-RTu" secondAttribute="height" multiplier="1:1" id="sgT-NZ-vth"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="sgT-NZ-vth"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yIU-pC-RTu" secondAttribute="bottom" id="2mc-Ja-fuQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yIU-pC-RTu" secondAttribute="bottom" id="5Tb-gl-Tyr"/>
+                            <constraint firstItem="yIU-pC-RTu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7zy-zX-oGG"/>
+                            <constraint firstItem="yIU-pC-RTu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KdT-nL-LJd"/>
+                            <constraint firstItem="yIU-pC-RTu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="NmU-1s-MVV"/>
+                            <constraint firstItem="yIU-pC-RTu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="YlN-vw-3eH"/>
+                            <constraint firstAttribute="trailing" secondItem="yIU-pC-RTu" secondAttribute="trailing" id="ZG0-iY-MPY"/>
+                            <constraint firstItem="yIU-pC-RTu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cTw-wA-pBc"/>
+                            <constraint firstItem="yIU-pC-RTu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="euw-CO-tTq"/>
+                            <constraint firstAttribute="trailing" secondItem="yIU-pC-RTu" secondAttribute="trailing" id="lf8-pZ-aoS"/>
+                            <constraint firstAttribute="trailing" secondItem="yIU-pC-RTu" secondAttribute="trailing" id="slU-pH-DeX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yIU-pC-RTu" secondAttribute="bottom" id="ywd-3j-mxT"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7zy-zX-oGG"/>
+                                <exclude reference="KdT-nL-LJd"/>
+                                <exclude reference="YlN-vw-3eH"/>
+                                <exclude reference="ZG0-iY-MPY"/>
+                                <exclude reference="euw-CO-tTq"/>
+                                <exclude reference="lf8-pZ-aoS"/>
+                                <exclude reference="5Tb-gl-Tyr"/>
+                                <exclude reference="ywd-3j-mxT"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="244" y="670"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="space-bg" width="988" height="946"/>
+    </resources>
 </document>
