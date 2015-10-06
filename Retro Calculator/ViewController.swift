@@ -130,6 +130,10 @@ class ViewController: UIViewController {
         processOperation(currentOperation)
     }
     
+    @IBAction func clearButton(sender: UIButton) {
+        processOperation(Operation.Empty)
+        outputLabel.text = "0"
+    }
     
     
 }

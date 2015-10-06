@@ -289,6 +289,9 @@
                                                     <constraint firstAttribute="width" constant="183" id="oIe-mT-vW6"/>
                                                 </constraints>
                                                 <state key="normal" image="clear"/>
+                                                <connections>
+                                                    <action selector="clearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Dg-Go-fOq"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <animations/>
